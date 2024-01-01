@@ -147,8 +147,8 @@ equal.onclick = () => {
 		str = "";
 	} else if (str[str.length - 1] == ".") {
 		str = str.slice(0, -1);
-		str = eval(str);
-		res.innerHTML = str;
+		str = String(eval(str));
+		res.innerHTML = String(eval(str));
 	} else if (isDigit(str)) {
 		res.innerHTML = str;
 	} else if (!isDigit(str[str.length - 1])) {
