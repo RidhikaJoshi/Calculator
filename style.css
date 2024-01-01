@@ -2,13 +2,27 @@
     margin:0;
     padding:0;
 }
+body{
+    background-color:#040D12;
+
+}
+h1{
+    color:white;
+    text-align:center;
+    font-size: 2em;
+    font-weight: 600;
+    margin: auto;
+    margin-top: 1em;
+    text-decoration: underline;
+
+}
 #Container
 {
     width:23em;
     height:30em;
-    background-color: aquamarine;
-    margin: 3em auto;
-    border: 2px solid black;
+    background-color:#183D3D;
+    margin: 2em auto;
+    /* border: 2px solid black; */
 }
 #Container div{
     width:100%;
@@ -16,23 +30,27 @@
   
 }
 #Container div button{
+    color:white;
     width:25%;
     height:100%;
     margin-right: -4px;
-    /* background-color: rgb(9, 215, 30); */
+    background-color: #5C8374;
     display:inline-block;
     vertical-align: top;
     font-size:x-large;
     font-weight: 700;
+    border: 1px solid black;
+    border-radius: 0;
 }
 #div1
 {
     position: relative;
 }
 #div1 span {
+    color: white;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 0.5em;
     font-size: xx-large;
     font-weight: 800;
 }
