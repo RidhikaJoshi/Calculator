@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+}
+#Container
+{
+    width:23em;
+    height:30em;
+    background-color: aquamarine;
+    margin: 3em auto;
+    border: 2px solid black;
+}
+#Container div{
+    width:100%;
+    height:16.7%;
+  
+}
+#Container div button{
+    width:25%;
+    height:100%;
+    margin-right: -4px;
+    /* background-color: rgb(9, 215, 30); */
+    display:inline-block;
+    vertical-align: top;
+    font-size:x-large;
+    font-weight: 700;
+}
+#div1
+{
+    position: relative;
+}
+#div1 span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: xx-large;
+    font-weight: 800;
+}
