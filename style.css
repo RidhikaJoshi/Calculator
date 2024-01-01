@@ -26,6 +26,7 @@ h1{
 }
 @media (max-width: 600px) {
     #Container {
+        width: 21em;
         margin: 1em auto;
         /* Adjust the margin for smaller screens */
     }
