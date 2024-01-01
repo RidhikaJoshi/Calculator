@@ -2,7 +2,7 @@ let str = "";
 let res = document.getElementById("res");
 let ac = document.getElementById("AC");
 let zero = document.getElementById("zero");
-let doublezero = document.getElementById("double-zero");
+let sign = document.getElementById("sign");
 let one = document.getElementById("one");
 let two = document.getElementById("two");
 let three = document.getElementById("three");
@@ -29,10 +29,32 @@ zero.onclick = () => {
 	str += "0";
 	res.innerHTML = str;
 };
-doublezero.onclick = () => {
-	str += "00";
-	res.innerHTML = str;
+sign.onclick = () => {
+	if (str == "") {
+		str += "-";
+		str += "0";
+		res.innerHTML = str;
+	} else {
+		let k = "";
+		while (str.length != 0 && isDigit(str[str.length - 1])) {
+			k += str[str.length - 1];
+			str = str.slice(0, -1);
+		}
+		k = k.split("").reverse().join("");
+		k = Number.parseInt(k);
+		k = -k;
+		k = String(k);
+		if (str.length == 0) {
+			str += k;
+		} else {
+			str += `${k}`;
+		}
+
+		k = "";
+		res.innerHTML = str;
+	}
 };
+
 one.onclick = () => {
 	str += "1";
 	res.innerHTML = str;
