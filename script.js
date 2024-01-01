@@ -142,28 +142,30 @@ function isDigit(str) {
 	return !isNaN(str) && !isNaN(parseFloat(str));
 }
 equal.onclick = () => {
-	console.log(str);
-	if (isDigit(str)) {
-		res.innerHTML = str;
-	} else if (str != "" && str[str.length - 1] == ".") {
+	if (str == "") {
+		res.innerHTML = 0;
+		str = "";
+	} else if (str[str.length - 1] == ".") {
 		str = str.slice(0, -1);
 		str = eval(str);
 		res.innerHTML = str;
-	} else if (str != "" && !isDigit(str[str.length - 1])) {
+	} else if (isDigit(str)) {
+		res.innerHTML = str;
+	} else if (!isDigit(str[str.length - 1])) {
 		res.innerHTML = "Syntax Error";
 		setTimeout(() => {
 			res.innerHTML = 0;
 		}, 1000);
 		str = "";
 	} else {
-		res.innerHTML = eval(str);
-		str = eval(str);
-		//console.log(str);
+		res.innerHTML = String(eval(str));
+		str = String(eval(str));
 		if (str == "Infinity") {
-			str = "0";
 			setTimeout(() => {
 				res.innerHTML = 0;
 			}, 1000);
+			str = "";
 		}
+		console.log(typeof str);
 	}
 };
