@@ -36,12 +36,15 @@ sign.onclick = () => {
 		res.innerHTML = str;
 	} else {
 		let k = "";
-		while (str.length != 0 && isDigit(str[str.length - 1])) {
+		while (
+			str.length != 0 &&
+			(isDigit(str[str.length - 1]) || str[str.length - 1] == ".")
+		) {
 			k += str[str.length - 1];
 			str = str.slice(0, -1);
 		}
 		k = k.split("").reverse().join("");
-		k = Number.parseInt(k);
+		k = Number.parseFloat(k);
 		k = -k;
 		k = String(k);
 		if (str.length == 0) {
