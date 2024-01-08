@@ -47,7 +47,7 @@ h1{
     font-size:x-large;
     font-weight: 700;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 0;
     cursor: pointer;
 }
 #Container div button:hover{
